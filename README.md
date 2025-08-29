@@ -7,27 +7,24 @@ This repository contains a collection of **Terraform** projects for managing and
 Each folder in this repository represents a separate Terraform project.
 - `aws-terraform-initialize/`
 - `...`
+# AWS Terraform Projects
 
-### Current Project: `terraform-demo-project`
+This repository is a collection of Terraform configurations for provisioning and managing various cloud infrastructure projects on Amazon Web Services (AWS). Each directory is a separate project with its own set of Terraform files.
 
-This project demonstrates how to build a Virtual Private Cloud (VPC) with public and private subnets, along with creating resources such as EC2 servers and S3 buckets.
+## Repository Structure
 
-#### Key Features:
-- **Terraform Settings:** Defines the required Terraform version and uses a local backend.
-- **Provider:** Utilizes the AWS provider.
-- **Variables:** Defines variables for the region, server count, and bucket names to allow for easy customization.
-- **Locals:** Sets reusable local values.
-- **Networking:** Creates a VPC, Internet Gateway, Route Table, and public/private subnets.
-- **Data Sources:** Fetches the latest Ubuntu AMI.
-- **Resources:**
-    - Creates **EC2** servers using the `count` meta-argument.
-    - Creates **S3** buckets using the `for_each` meta-argument.
-- **Outputs:** Displays key information after deployment, such as public IPs and resource IDs.
+Each project is located in its own directory, each file in its own specific branch, making them independent and easy to navigate through the branches.
 
-#### How to Use:
-1.  Install Terraform and the AWS CLI on your machine.
-2.  Set up your AWS credentials.
-3.  Navigate to the project directory: `cd terraform-branch-project`.
-4.  Initialize the project: `terraform init`.
-5.  View the execution plan: `terraform plan`.
-6.  Apply the configuration: `terraform apply`.
+
+To run a project, simply navigate into its directory.
+
+## How to Use
+
+1.  **Prerequisites:** Ensure you have **Terraform** and the **AWS CLI** installed and configured on your system.
+2.  **Navigate:** Go to the directory of the project you want to deploy.
+    ```sh
+    cd project-name
+    ```
+3.  **Initialize:** Run `terraform init` to download the required provider plugins.
+4.  **Plan:** Use `terraform plan` to see the resources that will be created without making any changes.
+5.  **Apply:** Run `terraform apply` to deploy the infrastructure.
